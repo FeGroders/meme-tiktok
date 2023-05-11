@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <title>Abra para uma surpresa!</title>
+    <style>
+        body {
+            background-color: #d00000;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            overflow: hidden;
+        }
+
+        button {
+            position: relative;
+            background-color: #fff;
+            border: none;
+            border-radius: 7%;
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        p {
+            color: #fff;
+            font-size: 30px;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <p>Volta comigo?</p>
+    <button id="sim">SIM</button>
+    <button id="nao">NÃO</button>
+</body>
+<script>
+    function moverBtn(){
+        var x = Math.floor(Math.random() * 250);
+        var y = Math.floor(Math.random() * 250);
+        if (x > 300) {
+            x = 300;
+        }
+        if (y > 300) {
+            y = 300;
+        }
+        console.log(x, y);
+        btn.style.left = x + "px";
+        btn.style.top = y + "px";
+    }
+
+    var btn = document.getElementById("nao");
+    btn.addEventListener("mouseover", moverBtn);
+    btn.addEventListener("click", moverBtn);
+
+    var btnSim = document.getElementById("sim");
+    btnSim.addEventListener("click", function() {
+        window.location.href = "https://www.instagram.com/reel/CrbaZgUrcqt/?igshid=ZWIzMWE5ZmU3Zg==";
+    });
+</script>
+</html>
